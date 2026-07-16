@@ -1,0 +1,12 @@
+.superpowers/
+.worktrees/
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+.qa-edge-profile/
+.qa-*-profile*/
+.qa-*/
+qa-*.png
+vite-preview*.log

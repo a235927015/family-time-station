@@ -1,0 +1,24 @@
+.birthday-book { min-height: 100dvh; max-width: 760px; margin: auto; position: relative; overflow: hidden; background: #f7f8f3; color: #173c32; }
+.birthday-tools { position: absolute; z-index: 5; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: calc(14px + env(safe-area-inset-top)) 16px 12px; font-size: .78rem; font-weight: 800; }
+.birthday-tools > span { flex: 0 1 auto; }
+.birthday-tools > div { display: flex; flex: 0 0 auto; gap: 4px; margin-left: auto; }
+.birthday-tools button { min-height: 38px; border: 1px solid rgb(23 60 50 / 20%); border-radius: 12px; background: rgb(247 248 243 / 88%); color: #173c32; padding: 0 10px; }
+.birthday-cover { min-height: 100dvh; padding: 90px 24px 26px; display: flex; flex-direction: column; color: white; background: linear-gradient(180deg,rgb(10 38 31 / 8%),rgb(10 38 31 / 88%)),linear-gradient(135deg,#8ca79a,#173c32); }
+.travel-stamp { width: 78px; height: 78px; border: 2px solid rgb(255 255 255 / 70%); border-radius: 50%; display: grid; place-items: center; text-align: center; font-size: .7rem; letter-spacing: .08em; transform: rotate(-8deg); }
+.cover-copy { margin-top: auto; }.cover-copy > p:first-child { color: #cfddd7; }
+.cover-copy h1 { max-width: 100%; margin: 12px 0; font-size: clamp(2.25rem,9.5vw,3.6rem); line-height: 1.1; letter-spacing: -.05em; white-space: pre-line; }
+.birthday-gift h1 { max-width: 13ch; margin: 12px 0; font-size: clamp(2.35rem,10vw,4rem); line-height: 1.08; letter-spacing: -.055em; }
+.cover-copy > p:not(:first-child), .birthday-gift > p { max-width: 31rem; color: #e0eae6; line-height: 1.7; }
+.birthday-cta { min-height: 54px; border: 0; border-radius: 14px; background: #c94f28; color: #fffaf7; padding: 0 22px; font-weight: 850; font-size: 1rem; }
+.cover-copy .birthday-cta { width: 100%; margin-top: 14px; }.cover-copy small { display: block; margin-top: 12px; color: #cfddd7; text-align: center; }
+.trip-slide { min-height: 100dvh; padding: 72px 18px 24px; display: flex; flex-direction: column; }
+.trip-photo { height: min(54dvh,500px); overflow: hidden; border-radius: 20px; background: #dfe7e1; box-shadow: 0 20px 44px rgb(23 60 50 / 13%); }
+.trip-photo img { width: 100%; height: 100%; object-fit: cover; }.photo-placeholder { width: 100%; height: 100%; display: grid; place-content: center; gap: 8px; text-align: center; color: #e8f0ec; background: linear-gradient(145deg,#789689,#244b40); }.photo-placeholder span { font-size: .78rem; }.photo-placeholder strong { font-size: 1.2rem; }
+.trip-copy { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }.trip-copy > span { color: #6e7974; font: 700 .75rem ui-monospace,monospace; }
+.trip-copy p:first-child { margin: 0; color: #c94f28; font-size: .75rem; font-weight: 800; }.trip-copy h1 { margin: 4px 0; font-size: 1.75rem; letter-spacing: -.04em; }.memory-line { margin: 8px 0 0; color: #53645c; line-height: 1.6; }
+.trip-controls { display: grid; grid-template-columns: 1fr 2fr; gap: 8px; margin-top: auto; }.trip-controls > button:first-child { border: 1px solid #d9dfda; border-radius: 14px; background: white; color: #173c32; }.trip-controls button:disabled { opacity: .4; }
+.trip-progress { height: 3px; margin-top: 16px; background: #d9dfda; }.trip-progress i { display: block; height: 100%; background: #c94f28; transition: width 240ms ease-out; }
+.trip-summary { min-height: 100dvh; padding: 110px 24px 30px; display: flex; flex-direction: column; justify-content: center; background: #e4ebe6; }.trip-summary > p:first-child { color: #c94f28; font-weight: 800; }.trip-summary h1 { margin: 8px 0 20px; font-size: clamp(2rem,8vw,3.5rem); line-height: 1.2; letter-spacing: -.04em; }.trip-summary > p { line-height: 1.7; }.trip-summary .birthday-cta { margin-top: 30px; }
+.birthday-gift { min-height: 100dvh; padding: 110px 24px 28px; display: flex; flex-direction: column; background: #173c32; color: white; }.birthday-gift > p:first-child { color: #9db3aa; font-size: .78rem; font-weight: 800; }.gift-ticket { margin: 30px 0; padding: 22px; border-radius: 20px; background: #f7f8f3; color: #173c32; }.gift-ticket strong { display: block; font-size: 1.35rem; }.gift-ticket span { display: block; margin-top: 8px; color: #6e7974; line-height: 1.6; }.birthday-gift .birthday-cta { width: 100%; margin-top: auto; }
+@media (prefers-reduced-motion: no-preference) { .trip-slide, .trip-summary, .birthday-gift { animation: birthday-enter 240ms ease-out; } @keyframes birthday-enter { from { opacity: 0; transform: translateX(14px); } } }
+@media (prefers-color-scheme: dark) { .trip-slide { background: #10251f; color: #eef5f1; }.memory-line { color: #adbbb4; }.trip-controls > button:first-child { border-color: #365047; background: #19332b; color: #eef5f1; } }

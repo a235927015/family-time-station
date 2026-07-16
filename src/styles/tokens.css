@@ -1,0 +1,23 @@
+:root {
+  color-scheme: light dark;
+  --ink: #173c32;
+  --paper: #f7f8f3;
+  --surface: #fbfcf9;
+  --accent: #c94f28;
+  --accent-ink: #fffaf7;
+  --muted: #6e7974;
+  --line: #d9dfda;
+  --radius: 16px;
+  --shadow: 0 18px 50px rgb(23 60 50 / 10%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #eef5f1;
+    --paper: #10251f;
+    --surface: #19332b;
+    --muted: #adbbb4;
+    --line: #365047;
+    --shadow: 0 18px 50px rgb(0 0 0 / 24%);
+  }
+}
