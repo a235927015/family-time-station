@@ -5,7 +5,7 @@ export const birthdayConfig: BirthdayConfig = {
   coverTitle: '爸，先看几张\n熟悉的风景',
   coverBody: '这几年拍了不少照片，挑了几张给你。',
   stops: [
-    { image: `${import.meta.env.BASE_URL}trips/01.jpg`, place: '杭州 · 西湖', memory: '那天走了两万步，你说“也就一般累”。' },
+    { image: `${import.meta.env.BASE_URL}trips/01.jpg`, place: '越南 · 芽庄', memory: '路边停一下，椰子当然要趁新鲜喝。', objectPosition: 'center 48%' },
     { image: `${import.meta.env.BASE_URL}trips/02.jpg`, place: '北京 · 景山', memory: '为了拍这张照片，大家难得都没眨眼。' },
     { image: `${import.meta.env.BASE_URL}trips/03.jpg`, place: '厦门 · 环岛路', memory: '海风挺大，但没有影响你坚持拍照。' },
     { image: `${import.meta.env.BASE_URL}trips/04.jpg`, place: '苏州 · 平江路', memory: '走走停停，最后还是吃的记得最清楚。' },

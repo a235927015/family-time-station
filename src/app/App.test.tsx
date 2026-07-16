@@ -77,7 +77,9 @@ it('shows the birthday journey once and finishes at the reminder tool', () => {
   expect(document.querySelector('audio')).toBeNull();
   expect(screen.queryByRole('button', { name: /音乐/ })).not.toBeInTheDocument();
   fireEvent.click(screen.getByRole('button', { name: '出发' }));
-  expect(screen.getByText('杭州 · 西湖')).toBeInTheDocument();
+  expect(screen.getByText('越南 · 芽庄')).toBeInTheDocument();
+  expect(screen.getByText('路边停一下，椰子当然要趁新鲜喝。')).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: '越南 · 芽庄旅行照片' })).toHaveAttribute('src', expect.stringContaining('trips/01.jpg'));
   fireEvent.click(screen.getByRole('button', { name: '跳过旅行照片' }));
   expect(screen.getByText('家庭时光局')).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /爸，生日快乐/ })).toBeInTheDocument();
