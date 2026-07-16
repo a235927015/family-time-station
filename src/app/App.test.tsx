@@ -72,11 +72,10 @@ it('completes, edits, and deletes a reminder', () => {
 
 it('shows the birthday journey once and finishes at the reminder tool', () => {
   localStorage.setItem(STATE_KEY, JSON.stringify({ version: 1, reminders: [], samplesDismissed: true }));
-  const play = vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue();
-  vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => undefined);
   render(<App />);
   expect(screen.getByRole('heading', { name: /熟悉的风景/ })).toBeInTheDocument();
-  expect(play).not.toHaveBeenCalled();
+  expect(document.querySelector('audio')).toBeNull();
+  expect(screen.queryByRole('button', { name: /音乐/ })).not.toBeInTheDocument();
   fireEvent.click(screen.getByRole('button', { name: '出发' }));
   expect(screen.getByText('杭州 · 西湖')).toBeInTheDocument();
   fireEvent.click(screen.getByRole('button', { name: '跳过旅行照片' }));

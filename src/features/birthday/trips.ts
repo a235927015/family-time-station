@@ -1,10 +1,9 @@
 export interface TripStop { image: string; place: string; memory: string; objectPosition?: string }
-export interface BirthdayConfig { coverTitle: string; coverBody: string; music?: string; stops: TripStop[] }
+export interface BirthdayConfig { coverTitle: string; coverBody: string; stops: TripStop[] }
 
 export const birthdayConfig: BirthdayConfig = {
   coverTitle: '爸，先看几张\n熟悉的风景',
   coverBody: '这几年拍了不少照片，挑了几张给你。',
-  music: `${import.meta.env.BASE_URL}audio/birthday.mp3`,
   stops: [
     { image: `${import.meta.env.BASE_URL}trips/01.jpg`, place: '杭州 · 西湖', memory: '那天走了两万步，你说“也就一般累”。' },
     { image: `${import.meta.env.BASE_URL}trips/02.jpg`, place: '北京 · 景山', memory: '为了拍这张照片，大家难得都没眨眼。' },
